@@ -75,7 +75,7 @@ public class AuthController {
 	  HashMap<String,Object> resultMap = new HashMap<String,Object>();
     session.invalidate(); 
 	  resultMap.put("result", "sucess");
-	  //json문자열을 생성한다...ㅎㅎㅎㅎ호호호호호호호호호호호호홓호호
+	  //json문자열을 생성한다...
 	  return new Gson().toJson(resultMap);
   }
 }
