@@ -74,7 +74,9 @@ public class AuthController {
   public String logout(HttpSession session) {
 	  HashMap<String,Object> resultMap = new HashMap<String,Object>();
     session.invalidate(); 
-    return "redirect:login.do";
+	  resultMap.put("result", "sucess");
+	  //json문자열을 생성한다...ㅎㅎㅎㅎ호호호호호호호호호호호호홓호호
+	  return new Gson().toJson(resultMap);
   }
 }
 
