@@ -33,7 +33,9 @@ public class AuthController {
       String saveEmail,
       HttpServletResponse response,
       HttpSession session) throws Exception {
-
+	  
+	  System.out.println("로그인처리중");
+	    HashMap<String,Object> resultMap = new HashMap<String,Object>();
     if (saveEmail != null) {
       Cookie cookie = new Cookie("email", email);
       cookie.setMaxAge(60 * 60 * 24);
@@ -47,7 +49,7 @@ public class AuthController {
 
     Member member = memberService.getUser(email, password);
     
-    HashMap<String,Object> resultMap = new HashMap<String,Object>();
+
 
     if (member == null) {
     	
